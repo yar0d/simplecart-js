@@ -860,8 +860,8 @@
                     /*
                      * Patch to fix US dollar only when parsing currency from val
                      */
-                    return = isUndefined(val) ?
-                        parseFloat(this.get('price')) :
+                    return isUndefined(val) ?
+                        this.get('price') :
                         this.set("price", parseFloat((val).toString().replace(simpleCart.currency().symbol, "").replace(simpleCart.currency().delimiter, "").replace(simpleCart.currency().decimal, ".")));
                 },
                 id: function () {
