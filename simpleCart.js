@@ -767,7 +767,7 @@
                 me.equals = function (item) {
                     for( var label in _data ){
                         if (Object.prototype.hasOwnProperty.call(_data, label)) {
-                            if (label !== 'quantity' && label !== 'id') {
+                            if (label !== 'quantity' && label !== 'id' && label !== 'extra') {
                                 if (item.get(label) !== _data[label]) {
                                     return false;
                                 }
